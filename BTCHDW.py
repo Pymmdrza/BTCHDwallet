@@ -20,6 +20,7 @@ import random
 from colorama import Fore, Style
 from lxml import html
 import requests
+import time
 green = Fore.GREEN
 red = Fore.RED
 white = Fore.WHITE
