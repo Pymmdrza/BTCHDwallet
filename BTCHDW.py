@@ -16,7 +16,6 @@ mmdrza = '''
 from hdwallet import HDWallet
 from hdwallet.symbols import BTC, ETH
 from colorthon import Colors
-from lxml import html
 import requests, os, random, time, platform, re, json
 
 
