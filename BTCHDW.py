@@ -1,11 +1,20 @@
+from colorthon import Colors
+from hdwallet import HDWallet
+from hdwallet.symbols import BTC, ETH
+import random
+import requests, os
+import time, re, platform
+
 mmdrza = '''
 
-             _ __ ___  _ __ ___   __| |_ __ ______ _
-            | '_ ` _ \| '_ ` _ \ / _` | '__|_  / _` |
-            | | | | | | | | | | | (_| | |   / / (_| |
-            |_| |_| |_|_| |_| |_|\__,_|_|  /___\__,_|
-=========================[M M D Z A . C o M]==============================
-= Athur : MMDRZA
+███╗   ███╗███╗   ███╗██████╗ ██████╗ ███████╗ █████╗     ██████╗ ██████╗ ███╗   ███╗
+████╗ ████║████╗ ████║██╔══██╗██╔══██╗╚══███╔╝██╔══██╗   ██╔════╝██╔═══██╗████╗ ████║
+██╔████╔██║██╔████╔██║██║  ██║██████╔╝  ███╔╝ ███████║   ██║     ██║   ██║██╔████╔██║
+██║╚██╔╝██║██║╚██╔╝██║██║  ██║██╔══██╗ ███╔╝  ██╔══██║   ██║     ██║   ██║██║╚██╔╝██║
+██║ ╚═╝ ██║██║ ╚═╝ ██║██████╔╝██║  ██║███████╗██║  ██║██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║
+╚═╝     ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝
+                              -***-                                                          
+= author : MMDRZA
 = Email : Mmdrza@vk.com
 = Web : https://Mmdrza.Com
 = Medium : https://mdrza.medium.com
@@ -13,21 +22,17 @@ mmdrza = '''
 = Donat = Bitcoin 1MMDRZA12xdBLD1P5AfEfvEMErp588vmF9
 =========================[M M D Z A . C o M]==============================
         '''
-from hdwallet import HDWallet
-from hdwallet.symbols import BTC, ETH
-from colorthon import Colors
-import requests, os, random, time, platform, re, json
 
 
 # =========================[Terminal Clear]===============================
 def getClear():
     if 'win' in platform.platform() or 'Windows' in platform.platform():
         os.system('cls')
-    elif 'linux' in platform.platform():
+    elif 'linux' in platform.platform() or 'Linux' in platform.platform():
         os.system('clear')
     elif 'darwin' in platform.platform():
         os.system('clear')
-    elif 'mac' in platform.platform():
+    elif 'mac' in platform.platform() or 'Mac' in platform.platform():
         os.system('clear')
     else:
         raise ValueError('Not Supported Platform: "%s"' % platform.platform())
@@ -54,8 +59,8 @@ reset = Colors.RESET
 # -------------------------------------------------------------------------
 getClear()
 # -------------------------------------------------------------------------
-print(Fore.GREEN, mmdrza, Style.RESET_ALL)
-print('Start ...')
+print(green, mmdrza, reset)
+print('\n\nStart ...')
 time.sleep(2)
 # -------------------------------------------------------------------------
 z = 1
