@@ -1,8 +1,14 @@
-@Echo off
-title MMDRZA.COM - BTC & ETH HD Address
-pip install colorthon
+@echo off
+REM Install the necessary packages
 pip install hdwallet
-Pushd "%~dp0"
-:loop
+
+pip install colorthon
+
+pip install requests
+
+
+:loop_start
 python BTCHDW.py
-goto loop
+echo Restarting script...
+timeout /t 5 /nobreak
+goto loop_start
