@@ -16,6 +16,11 @@ command_success "[ERROR] Failed to install colorthon"
 pip3 install requests
 command_success "[ERROR] Failed to install requests"
 
+pip3 install requests-random-user-agent
+command_success "[ERROR] Failed to install requests-random-user-agent"
+
+
+
 while true; do
     python3 BTCHDW.py
     echo "Restarting script..."
