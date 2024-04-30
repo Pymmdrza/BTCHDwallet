@@ -10,6 +10,7 @@ First Install Package's With This Common :
 pip install hdwallet
 pip install colorthon
 pip install requests
+pip install requests-random-user-agent
 ```
 ---
 if have not `pip3` on you linux system:
@@ -21,6 +22,8 @@ sudo apt-get install python3-pip
 installing with `pip3` in linux:
 ```bash
 pip3 install hdwallet&&pip3 install colorthon&&pip3 install requests
+pip3 install requests-random-user-agent
+
 ```
 
 ----
