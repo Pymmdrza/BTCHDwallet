@@ -2,7 +2,7 @@ from colorthon import Colors
 from hdwallet import HDWallet
 from hdwallet.symbols import BTC, ETH
 import random
-import requests, os
+import requests, os, requests_random_user_agent
 import time, re, platform
 
 mmdrza = '''
@@ -13,9 +13,9 @@ mmdrza = '''
 ██║╚██╔╝██║██║╚██╔╝██║██║  ██║██╔══██╗ ███╔╝  ██╔══██║   ██║     ██║   ██║██║╚██╔╝██║
 ██║ ╚═╝ ██║██║ ╚═╝ ██║██████╔╝██║  ██║███████╗██║  ██║██╗╚██████╗╚██████╔╝██║ ╚═╝ ██║
 ╚═╝     ╚═╝╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝
-                                                         
+
 = author : MMDRZA
-= Email : Mmdrza@vk.com
+= Email : Mmdrza@usa.com
 = Web : https://Mmdrza.Com
 = Medium : https://mdrza.medium.com
 = Github.Com/Pymmdrza
@@ -37,18 +37,24 @@ def getClear():
         raise ValueError('Not Supported Platform: "%s"' % platform.platform())
 
 
-def ethBal(addr: str) -> str:
-    url = f"https://ethereum.atomicwallet.io/api/v2/address/{addr}"
-    req = requests.get(url).json()
-    ret = dict(req)['balance']
-    return int(ret) / 1000000000000000000
+def ethBal(addr: str):
+    url = f"https://ethbook.guarda.co/api/v2/address/{addr}"
+    req = requests.get(url)
+    if req.status_code == 200:
+        ret = int(dict(req.json())['balance'])
+        return ret / 1000000000000000000
+    else:
+        return 0
 
 
 def getBal(addr):
-    rl = f"https://bitcoin.atomicwallet.io/api/v2/address/{addr}"
-    req = requests.get(rl).json()
-    ret = dict(req)['balance']
-    return int(ret) / 10000000000
+    rl = f"https://btcbook.guarda.co/api/v2/address/{addr}"
+    req = requests.get(rl)
+    if req.status_code == 200:
+        ret = int(dict(req.json())['balance'])
+        return ret / 100000000
+    else:
+        return 0
 
 
 # ------------------------------------------------------------------------
@@ -97,7 +103,7 @@ while True:
     print(f"        | Private Key {red}(HEX)   {reset} | {red}{PRIVATE_KEY}{reset}")
     print(f"        {red}{'=' * 70}{reset}")
     z += 1
-   # ------------------------------------------------------------------------
+    # ------------------------------------------------------------------------
     if value1 > 0:
         ff += 1
         open('btcWin.txt', 'a').write(f'{btcaddr1}\n{PRIVATE_KEY}\n')
@@ -106,7 +112,7 @@ while True:
         open('btcWin.txt', 'a').write(f'{ethaddr}\n{PRIVATE_KEY}\n')
     else:
         continue
-      
+
 # =========================[M M D Z A . C o M]==============================
 # Programmer M M D R Z A
 # Web Mmdrza.Com
