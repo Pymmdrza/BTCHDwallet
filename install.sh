@@ -22,7 +22,7 @@ command_success "[ERROR] Failed to install requests-random-user-agent"
 
 
 while true; do
-    python3 BTCHDW.py
+    python3 singleWallet.py
     echo "Restarting script..."
     sleep 3
 done
