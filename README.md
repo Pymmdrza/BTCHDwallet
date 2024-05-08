@@ -53,11 +53,11 @@ install
 ----
 ### Run On Windows (cmd / powershell):
 
-`python BTCHDW.py`
+`python singleWallet.py`
 
 ### Run On Linux (debian):
 
-`python3 BTCHDW.py`
+`python3 singleWallet.py`
 
 #### Easy Install & Use (Just 1 Click)
 
@@ -78,21 +78,21 @@ can use easy install and auto install package just with a click : [ [Windows](ht
 
 Donate ~ Bitcoin: `1MMDRZA12xdBLD1P5AfEfvEMErp588vmF9`
 
-Programmer Telegram ID [@MrPyMmdrza](https://t.me/MrPyMmdrza)
+Programmer Telegram ID [@Mr1Mmdrza](https://t.me/Mr1Mmdrza)
 
 Programmer Telegram Channel [@Cryptoixer](https://t.me/cryptoixer)
 
 
 
 > **Warning**
-> Unfortunately, due to the ignorance of some dear users, we were not informed that some profiteers and uncultured people are selling some of my scripts at a lower price. And the user does not receive anything after payment. Some of these ignorant people give malicious and viral files to users. From here, I declare that the only official source for selling my scripts is the <a href="https://mmdrza.com" title="mmdrza | website" rel="follow">website</a> and [Telegram ID](https://t.me/MrPyMmdrza) or [Telegram Channel](https://t.me/Cryptoixer).
+> Unfortunately, due to the ignorance of some dear users, we were not informed that some profiteers and uncultured people are selling some of my scripts at a lower price. And the user does not receive anything after payment. Some of these ignorant people give malicious and viral files to users. From here, I declare that the only official source for selling my scripts is the <a href="https://mmdrza.com" title="mmdrza | website" rel="follow">website</a> and [Telegram ID](https://t.me/Mr1Mmdrza) or [Telegram Channel](https://t.me/Cryptoixer).
 
 
 
 ```
 # ================================================
 # Website : Mmdrza.Com
-# Email : X4@mmdrza.Com
+# Email : mmdrza@usa.com
 # Github.com/Pymmdrza
 # ================================================
 ```
