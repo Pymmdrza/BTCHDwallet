@@ -25,16 +25,8 @@ mmdrza = '''
 
 
 def getClear():
-    if 'win' in platform.platform() or 'Windows' in platform.platform():
-        os.system('cls')
-    elif 'linux' in platform.platform():
-        os.system('clear')
-    elif 'darwin' in platform.platform():
-        os.system('clear')
-    elif 'mac' in platform.platform():
-        os.system('clear')
-    else:
-        raise ValueError('Not Supported Platform: "%s"' % platform.platform())
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 
 
 def ethBal(addr: str):
